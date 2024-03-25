@@ -9,3 +9,33 @@
 .yellow-text {
     color: #FFCA28;
 }
+.login-header {
+    color: #ffffff;
+    background-color: #000000;
+    font-weight: 600;
+    font-size: 24px;
+}
+.login-body {
+    background-color: #FFCA28;
+}
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.code-language {
+    font-weight: normal;
+}
+
+pre {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    border-top: none;
+    max-height: 600px;
+    overflow: auto;
+}

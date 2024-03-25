@@ -6,6 +6,10 @@ Fusion Plex is a comprehensive catalogue management system designed to provide a
 
 The Fusion Plex system is intended to demonstrate key aspects of web application development, including but not limited to, database management, CRUD operations, and user interface design. It's built with a modern technology stack that can be adapted for teaching various software development concepts.
 
+## Tutorial Overview
+
+In this section, we will enhance Fusion Plex, a catalogue management system, by integrating application audit capabilities. Our goal is to track and maintain a comprehensive audit trail for all entities within our system. This ensures transparency and accountability for actions performed on the data by tracking who created or updated a record, when it was done, and the IP address from which the modification was made.
+
 ## Getting Started
 
 These instructions will help you get a copy of the project up and running on your local machine for development and testing purposes.
@@ -19,14 +23,29 @@ Before you begin, ensure you have the following installed:
 
 Additionally, familiarity with Spring Boot and PostgreSQL is recommended to fully understand the project setup and functionality.
 
+### Technology Stack for this Tutorial
+
+- Spring Security
+- Javers
+
+### Default Login to Application
+
+1. **Regular User**
+    - username: `user`
+    - password: `User@1234`
+
+2. **Admin User**
+    - username: `admin`
+    - password: `Admin@1234`
+
 ### Initial Setup
 
 To obtain the initial project setup, use the base branch of this repository:
 
 ```bash
-git clone -b base git@github.com:brunomilitzer/fusion-plex.git
+git clone -b base git@github.com:softwarebuilding-io/application-auditing.git
 
-cd fusion-plex
+cd application-auditing
 ```
 
 ### Base Project

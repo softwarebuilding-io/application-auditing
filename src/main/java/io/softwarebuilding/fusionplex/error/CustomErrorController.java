@@ -21,6 +21,10 @@ public class CustomErrorController implements ErrorController {
             if ( statusCode == HttpStatus.NOT_FOUND.value() ) {
                 model.addAttribute( "globalTitle", "404 Not Found" );
                 return "/error/404";
+            } else if ( statusCode == HttpStatus.FORBIDDEN.value() ) {
+                    model.addAttribute( "globalTitle", "403 Access Denied" );
+                    return "error/403";
+
             } else if ( statusCode == HttpStatus.BAD_REQUEST.value() ) {
                 model.addAttribute( "globalTitle", "400 Bad Request" );
                 return "error/400";

@@ -10,5 +10,4 @@ public abstract class BaseEntity implements Serializable {
 
     @Serial
     private static final long serialVersionUID = -33114089982657335L;
-
 }

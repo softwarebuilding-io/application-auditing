@@ -13,6 +13,11 @@ spring:
         default_schema: public
         hbm2ddl:
           auto: none # none, validate, update, create, create-drop
+
 server:
   servlet:
     context-path: /fusion-plex
+
+logging:
+  level:
+    org.springframework.security: debug

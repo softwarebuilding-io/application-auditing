@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/fragments :: head}"></head>
+<body>
+
+<div class="container mt-5">
+    <!-- Include the welcome fragment -->
+    <div th:replace="~{fragments/fragments :: welcome}"></div>
+
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header login-header">
+                    Login
+                </div>
+                <div class="card-body login-body">
+                    <!-- Include the alert fragment -->
+                    <div th:replace="~{fragments/fragments :: alert}"></div>
+
+                    <form class="mt-5 needs-validation" method="post" th:action="@{${formAction}}" th:object="${user}">
+                        <div class="form-group mt-2">
+                            <label for="username">Username</label>
+                            <input class="form-control" id="username" placeholder="Enter username"
+                                   th:classappend="${#fields.hasErrors('username')} ? 'is-invalid'" th:field="*{username}" type="text">
+                            <div class="invalid-feedback" th:errors="*{username}" th:if="${#fields.hasErrors('username')}">Username Error</div>
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="password">Password</label>
+                            <input class="form-control" id="password" placeholder="Enter Password"
+                                   th:classappend="${#fields.hasErrors('password')} ? 'is-invalid'" th:field="*{password}"
+                                   type="password">
+                            <div class="invalid-feedback" th:errors="*{password}" th:if="${#fields.hasErrors('password')}">Password Error</div>
+                        </div>
+                        <button class="btn btn-dark mt-5" type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/script/script.js}"></script>
+</body>
+</html>

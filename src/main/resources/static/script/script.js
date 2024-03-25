@@ -22,3 +22,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }, false);
 })();
+
+document.querySelectorAll('.copy-code-button').forEach(button => {
+    button.addEventListener('click', function() {
+        // Find the <pre><code> element that is a sibling of the button
+        const codeBlock = this.nextElementSibling;
+        const code = codeBlock.innerText;
+
+        // Copy code to clipboard
+        navigator.clipboard.writeText(code).then(() => {
+            // Optionally, provide feedback to the user that the text was copied
+            button.textContent = 'Copied!';
+            setTimeout(() => button.textContent = 'Copy Code', 2000);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
+    });
+});
