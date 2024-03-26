@@ -33,6 +33,16 @@
                     <li class="nav-item" sec:authorize="hasAuthority('ROLE_USER')">
                         <a class="nav-link" th:href="@{/genre/manage}">Manage Genres</a>
                     </li>
+                    <!-- Administration Dropdown Menu -->
+                    <li class="nav-item dropdown" sec:authorize="hasAuthority('ROLE_ADMIN')">
+                        <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdownMenuLink" role="button">
+                            Administration
+                        </a>
+                        <ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
+                            <li><a class="dropdown-item" th:href="@{/admin/audit/genres}">Audit Genre</a></li>
+                            <li><a class="dropdown-item" th:href="@{/admin/audit/titles}">Audit Title</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/logout}">Logout</a>
                     </li>

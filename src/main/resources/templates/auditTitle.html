@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/fragments :: head}"></head>
+<body>
+
+<!-- Include the navbar fragment -->
+<div th:replace="~{fragments/fragments :: navbar}"></div>
+
+<!-- Include the alert fragment -->
+<div th:replace="~{fragments/fragments :: alert}"></div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center mt-5">Genre <span class="yellow-text">Changes</span></h2>
+            <div class="code-header mt-5">
+                <span class="code-language">Json</span>
+                <button class="btn btn-sm btn-outline-dark copy-code-button">Copy</button>
+            </div>
+            <pre><code class="language-javascript"
+                       data-jsonp="https://api.github.com/repos/leaverou/prism/contents/prism.js"
+                       th:utext="${changes}">Title Changes</code></pre>
+        </div>
+    </div>
+</div>
+<div th:replace="~{fragments/fragments :: scripts}"></div>
+</body>

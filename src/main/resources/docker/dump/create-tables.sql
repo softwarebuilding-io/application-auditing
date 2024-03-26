@@ -20,6 +20,12 @@ CREATE TABLE public.genre
 (
     id         UUID                        NOT NULL DEFAULT uuid_generate_v4(),
     name       VARCHAR(255)                NOT NULL UNIQUE,
+    created_ip VARCHAR(15) NOT NULL DEFAULT '127.0.0.1',
+    created_on TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    created_user VARCHAR(60) NOT NULL DEFAULT 'ADMIN',
+    updated_ip VARCHAR(15),
+    updated_on TIMESTAMP,
+    updated_user VARCHAR(60),
     PRIMARY KEY (id)
 );
 
@@ -30,6 +36,12 @@ CREATE TABLE public.title
     description  VARCHAR(255)                NOT NULL,
     release_year SMALLINT                    NOT NULL,
     type         INTEGER                     NOT NULL,
+    created_ip VARCHAR(15) NOT NULL DEFAULT '127.0.0.1',
+    created_on TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    created_user VARCHAR(60) NOT NULL DEFAULT 'ADMIN',
+    updated_ip VARCHAR(15),
+    updated_on TIMESTAMP,
+    updated_user VARCHAR(60),
     PRIMARY KEY (id)
 );
 
