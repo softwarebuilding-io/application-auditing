@@ -33,7 +33,7 @@ CREATE TABLE public.title
 (
     id           UUID                        NOT NULL DEFAULT uuid_generate_v4(),
     name         VARCHAR(255)                NOT NULL UNIQUE,
-    description  VARCHAR(255)                NOT NULL,
+    description  VARCHAR(4000)               NOT NULL,
     release_year SMALLINT                    NOT NULL,
     type         INTEGER                     NOT NULL,
     created_ip VARCHAR(15) NOT NULL DEFAULT '127.0.0.1',
